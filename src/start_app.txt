@@ -1,0 +1,10 @@
+REM Setup virtual environment (run once)
+python -m venv movie_app_env
+movie_app_env\Scripts\activate.bat
+pip install -r requirements.txt
+
+REM Run the app (after setup)
+movie_app_env\Scripts\activate.bat
+cd src
+python preprocess.py
+streamlit run main.py
